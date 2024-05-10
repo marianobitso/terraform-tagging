@@ -15,16 +15,11 @@ provider "aws" {
   # other AWS provider configuration...
 
   default_tags {
-    tags = {
-      Name = module.my_module.exported_tag
-    }
+    tags = module.my_module.exported_tags
   }
 }
 
 resource "aws_instance" "example" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
-  tags = {
-    Name = module.my_module.exported_tag
-  }
 }

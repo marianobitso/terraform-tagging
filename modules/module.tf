@@ -1,7 +1,10 @@
 variable "my_tag" {
-  default = "example-tag"
+  default = {
+    Name = "my-testing-instance"
+    disposable = "yes"
+  }
 }
 
-output "exported_tag" {
+output "exported_tags" {
   value = var.my_tag
 }
