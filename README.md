@@ -58,4 +58,3 @@ source helpers.sh
 |----------|----------|----------|
 | find_override_with_content    | Finds specific file name and with specific content. | 1.0 |
 | find_by_env | Finds recursively all *.tfvars files where * matches a given set of stages  | 1.0 |
-* find_override_with_content()
