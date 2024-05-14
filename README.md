@@ -45,3 +45,17 @@ aws_instance.example: Creation complete after 35s [id=i-05da38bd017500ca6]
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
+
+## Helpers
+Helpers facilitate assessment to properly size PoC's scope.
+To use them, just load the script:
+```
+source helpers.sh
+```
+
+### Current helpers
+| Helper | Description | Version |
+|----------|----------|----------|
+| find_override_with_content    | Finds specific file name and with specific content. | 1.0 |
+| find_by_env | Finds recursively all *.tfvars files where * matches a given set of stages  | 1.0 |
+* find_override_with_content()
