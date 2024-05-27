@@ -7,15 +7,24 @@ terraform {
   }
 }
 
+variable "repository" {}
+
+variable "environment" {}
+
+variable "project_path" {}
+
 module "my_module" {
-  source = "./modules"
+  source       = "./modules"
+  repository   = var.repository
+  environment  = var.environment
+  project_path = var.project_path
 }
 
 provider "aws" {
   # other AWS provider configuration...
 
   default_tags {
-    tags = module.my_module.exported_tags
+    tags = module.my_module.tags
   }
 }
 
